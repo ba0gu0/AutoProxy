@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "AutoProxy",
+  "description": "一个用来辅助切换浏览器代理的插件, 可以配置自定义代理, 也可以配置远程代理！",
+  "version": "2.0",
+  "homepage_url": "https://github.com/cleverbao/Auto-Proxy",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self' ;",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": false
+  },
+  "icons": {
+    "128": "icon/icon-open.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "icon/icon-open.png"
+    },
+    "default_title": "Auto Proxy",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": [
+    "proxy",
+    "tabs",
+    "alarms",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "http://*/*",
+    "https://*/*",
+    "<all_urls>"
+  ]
+}
